@@ -24,3 +24,7 @@ The compact recommendation index is computed per novel from four populated chann
 Candidates are ranked by how many channels they appear in, ties broken by best channel rank and novel id. Each pool also carries the shared tag ids used as evidence.
 
 Published for use with [NovelCompass](https://github.com/cbangera2/NovelCompass).
+
+## Sources
+
+Rows carry a `source` of `novelupdates`, `anilist`, or `novelphoenix`. Novel Phoenix rows (ids `1,000,000 + site post id`) come from its public ranking lists and cover original English web novels NovelUpdates under-lists. Their tags are taken from the page where present, otherwise inferred from synopsis similarity to tagged NovelUpdates titles (flagged in `details[].inferred_tag_ids`); they have no direct recommendations or curated lists, so their pools use the tag and genre-peer channels only. Ratings are shrunk toward the catalog mean (25 pseudo-votes).
