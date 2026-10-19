@@ -3,3 +3,4 @@
 *.db-wal
 backups/
 recommender.manifest.json
+cover-fix-summary.md
